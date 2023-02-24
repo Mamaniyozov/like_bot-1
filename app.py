@@ -3,7 +3,7 @@ import telegram
 import os 
 from telegram import Bot, Update
 from telegram.ext import Dispatcher,Updater, CommandHandler, MessageHandler, Filters,CallbackContext,CallbackQueryHandler
-from like_bot import(
+from handler import(
     start,
     get_image,
     callback_like
