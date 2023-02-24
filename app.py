@@ -16,10 +16,8 @@ bot = Bot(token=TOKEN)
 
 
 @app.route('/', methods=['POST'])
-def main():
-    print(request.form)
-    return 'OK'
-@app.route('/add_like', methods=['POST'])
+
+
 def main():
     if request.method == 'GET':
         return {'status': 200}
