@@ -22,7 +22,10 @@ def get_image(update:Update, context:CallbackContext):
     print(f"Message id: {message_id}, Image id: {image_id}")
     # Send image to backend
     # endpoint url
-    url = 'http://motof.pythonanywhere.com/api/addImage'
+    url = 'https://muhammad121.pythonanywhere.com/'
+    data=requests.get(f'https://muhammad121.pythonanywhere.com/{message_id}')
+    data=data.json()
+    
     # Payload
     payload = {
         'message_id': message_id,
@@ -31,7 +34,7 @@ def get_image(update:Update, context:CallbackContext):
     # Send request
     response = requests.post(url, json=payload)
     # Print status code
-    print(response.status_code)
+    # print(response.status_code)
     keyboard = InlineKeyboardMarkup([
         [
         InlineKeyboardButton("Like 👍", callback_data=f'like:{message_id}'),
